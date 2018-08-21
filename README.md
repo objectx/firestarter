@@ -54,13 +54,13 @@ SUBCOMMANDS:
 
 Example
 
-```
+```Shell
 $ firestarter run --config misc/config.toml
 ```
 
 The configuration file uses toml. An example is below.
 
-```
+```Toml
 [web1] # set worker group name
 
 # set startup process and args
@@ -140,10 +140,8 @@ environments=["TEST_A=XXXX", "TEST_B=YYYY"]
 # upgrader_timeout=60
 
 [web2] # set other worker group name
-
-...
-
-
+#   :
+#   :
 ```
 
 ## Control command
@@ -152,7 +150,7 @@ Firestarter also provides a client that controls the running daemon.
 
 For example, you can check the status with the following command.
 
-```
+```Shell
 $ firestarter ctrl web1 status
 send ctrl command [status] to [web1] worker
 [web1] active
